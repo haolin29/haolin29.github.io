@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://haolin29.github.io/"/>
-  <updated>2016-02-28T03:41:46.000Z</updated>
+  <updated>2016-02-28T04:34:40.000Z</updated>
   <id>http://haolin29.github.io/</id>
   
   <author>
@@ -20,12 +20,13 @@
     <link href="http://haolin29.github.io/2016/02/27/Hexo-cheatsheet/"/>
     <id>http://haolin29.github.io/2016/02/27/Hexo-cheatsheet/</id>
     <published>2016-02-28T03:25:29.000Z</published>
-    <updated>2016-02-28T03:41:46.000Z</updated>
+    <updated>2016-02-28T04:34:40.000Z</updated>
     
     <content type="html">&lt;ol&gt;
 &lt;li&gt;编辑完文章后依次执行hexo g和hexo s,然后访问localhost:4000来预览效果&lt;/li&gt;
 &lt;li&gt;没有问题了以后，执行hexo d来同步到GitHub。&lt;/li&gt;
 &lt;/ol&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 </content>
     
     <summary type="html">
@@ -34,7 +35,6 @@
 &lt;li&gt;编辑完文章后依次执行hexo g和hexo s,然后访问localhost:4000来预览效果&lt;/li&gt;
 &lt;li&gt;没有问题了以后，执行hexo d来同步到GitHub。&lt;/li&gt;
 &lt;/ol&gt;
-
     
     </summary>
     
