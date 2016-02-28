@@ -74,7 +74,7 @@
     <link href="http://haolin29.github.io/2016/02/27/Hexo-cheatsheet/"/>
     <id>http://haolin29.github.io/2016/02/27/Hexo-cheatsheet/</id>
     <published>2016-02-28T03:25:29.000Z</published>
-    <updated>2016-02-28T04:47:58.000Z</updated>
+    <updated>2016-02-28T06:04:08.000Z</updated>
     
     <content type="html">&lt;ol&gt;
 &lt;li&gt;编辑完文章后依次执行hexo g和hexo s,然后访问localhost:4000来预览效果&lt;/li&gt;
@@ -92,6 +92,8 @@
     
     </summary>
     
+    
+      <category term="cheatsheet" scheme="http://haolin29.github.io/tags/cheatsheet/"/>
     
   </entry>
   
