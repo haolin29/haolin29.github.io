@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://haolin29.github.io/"/>
-  <updated>2016-02-28T04:42:54.000Z</updated>
+  <updated>2016-02-28T05:00:14.000Z</updated>
   <id>http://haolin29.github.io/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker 学习笔记</title>
+    <link href="http://haolin29.github.io/2016/02/27/docker-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://haolin29.github.io/2016/02/27/docker-学习笔记/</id>
+    <published>2016-02-28T04:59:08.000Z</published>
+    <updated>2016-02-28T05:00:14.000Z</updated>
+    
+    <content type="html">&lt;p&gt;docker用namespace来隔离每个container&lt;/p&gt;
+&lt;p&gt;cgroup: docker use group to achieve resource limiting&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/95833334/%E5%9B%BE%E5%BA%8A/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202016-02-27%2017.12.56.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/95833334/%E5%9B%BE%E5%BA%8A/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202016-02-27%2017.37.13.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;docker用namespace来隔离每个container&lt;/p&gt;
+&lt;p&gt;cgroup: docker use group to achieve resource limiting&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dl.dropboxuserconten
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -48,7 +72,7 @@
     <link href="http://haolin29.github.io/2016/02/27/Hexo-cheatsheet/"/>
     <id>http://haolin29.github.io/2016/02/27/Hexo-cheatsheet/</id>
     <published>2016-02-28T03:25:29.000Z</published>
-    <updated>2016-02-28T04:34:40.000Z</updated>
+    <updated>2016-02-28T04:47:58.000Z</updated>
     
     <content type="html">&lt;ol&gt;
 &lt;li&gt;编辑完文章后依次执行hexo g和hexo s,然后访问localhost:4000来预览效果&lt;/li&gt;
