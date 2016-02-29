@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://haolin29.github.io/"/>
-  <updated>2016-02-28T17:07:34.000Z</updated>
+  <updated>2016-02-29T04:30:05.000Z</updated>
   <id>http://haolin29.github.io/</id>
   
   <author>
@@ -14,6 +14,147 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tmux cheatsheet</title>
+    <link href="http://haolin29.github.io/2016/02/28/tmux-cheatsheet/"/>
+    <id>http://haolin29.github.io/2016/02/28/tmux-cheatsheet/</id>
+    <published>2016-02-29T04:28:24.000Z</published>
+    <updated>2016-02-29T04:30:05.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;tmux-cheatsheet&quot;&gt;&lt;a href=&quot;#tmux-cheatsheet&quot; class=&quot;headerlink&quot; title=&quot;tmux cheatsheet&quot;&gt;&lt;/a&gt;tmux cheatsheet&lt;/h1&gt;&lt;h2 id=&quot;新建会话&quot;&gt;&lt;a href=&quot;#新建会话&quot; class=&quot;headerlink&quot; title=&quot;新建会话&quot;&gt;&lt;/a&gt;新建会话&lt;/h2&gt;&lt;p&gt;&lt;code&gt;tmux new -s session-name&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;离开会话&quot;&gt;&lt;a href=&quot;#离开会话&quot; class=&quot;headerlink&quot; title=&quot;离开会话&quot;&gt;&lt;/a&gt;离开会话&lt;/h2&gt;&lt;p&gt;&lt;code&gt;ctrl-a d&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;tumx detach&lt;/p&gt;
+&lt;h2 id=&quot;接入之前的会话&quot;&gt;&lt;a href=&quot;#接入之前的会话&quot; class=&quot;headerlink&quot; title=&quot;接入之前的会话&quot;&gt;&lt;/a&gt;接入之前的会话&lt;/h2&gt;&lt;p&gt;tmux a&lt;/p&gt;
+&lt;p&gt;tumx a -t session-name&lt;/p&gt;
+&lt;h2 id=&quot;关闭会话&quot;&gt;&lt;a href=&quot;#关闭会话&quot; class=&quot;headerlink&quot; title=&quot;关闭会话&quot;&gt;&lt;/a&gt;关闭会话&lt;/h2&gt;&lt;p&gt;tumx kill-session -t session-name&lt;/p&gt;
+&lt;p&gt;tumx killall 同时关闭tmux&lt;/p&gt;
+&lt;h2 id=&quot;配置文件&quot;&gt;&lt;a href=&quot;#配置文件&quot; class=&quot;headerlink&quot; title=&quot;配置文件&quot;&gt;&lt;/a&gt;配置文件&lt;/h2&gt;&lt;p&gt;&lt;code&gt;~/.tmxu.conf&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;窗口操作&quot;&gt;&lt;a href=&quot;#窗口操作&quot; class=&quot;headerlink&quot; title=&quot;窗口操作:&quot;&gt;&lt;/a&gt;窗口操作:&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;c&lt;/th&gt;
+&lt;th&gt;创建新窗口&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;amp;&lt;/td&gt;
+&lt;td&gt;关闭当前窗口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;数字键&lt;/td&gt;
+&lt;td&gt;切换到指定窗口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;p&lt;/td&gt;
+&lt;td&gt;切换至上一窗口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;n&lt;/td&gt;
+&lt;td&gt;切换至下一窗口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;l&lt;/td&gt;
+&lt;td&gt;前后窗口间互相切换&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;w&lt;/td&gt;
+&lt;td&gt;通过窗口列表切换窗口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;,&lt;/td&gt;
+&lt;td&gt;重命名当前窗口，便于识别&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.&lt;/td&gt;
+&lt;td&gt;修改当前窗口编号，相当于重新排序&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;f&lt;/td&gt;
+&lt;td&gt;在所有窗口中查找关键词，便于窗口多了切换&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;面板操作:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;“&lt;/th&gt;
+&lt;th&gt;将当前面板上下分屏&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;%&lt;/td&gt;
+&lt;td&gt;将当前面板左右分屏&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;x&lt;/td&gt;
+&lt;td&gt;关闭当前分屏&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;!&lt;/td&gt;
+&lt;td&gt;将当前面板置于新窗口,即新建一个窗口,其中仅包含当前面板&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+方向键&lt;/td&gt;
+&lt;td&gt;以1个单元格为单位移动边缘以调整当前面板大小&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Alt+方向键&lt;/td&gt;
+&lt;td&gt;以5个单元格为单位移动边缘以调整当前面板大小&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;空格键&lt;/td&gt;
+&lt;td&gt;可以在默认面板布局中切换，试试就知道了&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;q&lt;/td&gt;
+&lt;td&gt;显示面板编号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;o&lt;/td&gt;
+&lt;td&gt;选择当前窗口中下一个面板&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;方向键&lt;/td&gt;
+&lt;td&gt;移动光标选择对应面板&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;{&lt;/td&gt;
+&lt;td&gt;向前置换当前面板&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;}&lt;/td&gt;
+&lt;td&gt;向后置换当前面板&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Alt+o&lt;/td&gt;
+&lt;td&gt;逆时针旋转当前窗口的面板&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+o&lt;/td&gt;
+&lt;td&gt;顺时针旋转当前窗口的面板&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;z&lt;/td&gt;
+&lt;td&gt;tmux 1.8新特性，最大化当前所在面板&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;tmux-cheatsheet&quot;&gt;&lt;a href=&quot;#tmux-cheatsheet&quot; class=&quot;headerlink&quot; title=&quot;tmux cheatsheet&quot;&gt;&lt;/a&gt;tmux cheatsheet&lt;/h1&gt;&lt;h2 id=&quot;新建会话&quot;&gt;&lt;a href
+    
+    </summary>
+    
+      <category term="cheatsheet" scheme="http://haolin29.github.io/categories/cheatsheet/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>为什么开始写博客</title>
