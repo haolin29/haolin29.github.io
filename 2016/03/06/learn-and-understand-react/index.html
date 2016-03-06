@@ -74,7 +74,7 @@
 <meta property="og:image" content="https://dl.dropboxusercontent.com/u/95833334/%E5%9B%BE%E5%BA%8A/React/render-react.png">
 <meta property="og:image" content="http://i.stack.imgur.com/ocEWx.png">
 <meta property="og:image" content="https://facebook.github.io/react/img/blog/thinking-in-react-components.png">
-<meta property="og:updated_time" content="2016-03-06T21:38:48.000Z">
+<meta property="og:updated_time" content="2016-03-06T21:58:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="learn and understand react">
 <meta name="twitter:description" content="初识 React.js什么是React？很多人可能会对这个问题感到困惑。React 其实不是Augular.js 或者 Backbone.js 那样的MVC 框架。 它只是MVC中的V — 也就是表现层， react 只做一件事，这也是符合UNIX的思路。按官网描述，其出发点为：
@@ -315,6 +315,7 @@
 <p>用于开发数据不断变化的大型应用程序（Building large applications with data that changes over time）。</p>
 </blockquote>
 <p>React最初来自Facebook内部的广告系统项目，项目实施过程中前端开发遇到了巨大挑战，代码变得越来越臃肿且混乱不堪，难以维护。于是痛定思痛，他们决定抛开很多所谓的“最佳实践”，重新思考前端界面的构建方式，于是就有了React。</p>
+<a id="more"></a>
 <h2 id="React的原理"><a href="#React的原理" class="headerlink" title="React的原理"></a>React的原理</h2><p>在Web开发中，我们常需要将动态数据实时反映到UI上，这就需要产生对DOM的操作。而复杂和频繁的DOM操作会产生性能瓶颈 (DOM对象本身也是一个js对象，所以严格来说，并不是操作这个对象慢，而是说操作了这个对象后，会触发一些浏览器行为，比如布局和绘制，这些会导致整个文档布局的重新计算）。因此，React引入了 Virtual DOM 的机制：</p>
 <p><img src="https://dl.dropboxusercontent.com/u/95833334/%E5%9B%BE%E5%BA%8A/React/virtual%20dom.png" alt=""></p>
 <pre><code>Virtual DOM 是一个模拟 DOM 树的 JavaScript 对象。 React 使用 Virtual DOM 来渲染 UI，当组件状态`state` 有更改的时候，React 会自动调用组件的 `render` 方法重新渲染整个组件的 UI。
