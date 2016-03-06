@@ -62,6 +62,7 @@
 <p>React最近将版本号升级到了从0.14直接跳到了15，移动了其中的小数点，这也说明了React的流行度和Facebook对它的自信。相信React及其组件化的开发思路，将会对前端开发这一社区产生更大的影响。我也非常期待React进一步表现和其生态的健康成熟发展。</p>
 <p>@author: Haolin Ju</p>
 <h2 id="延伸阅读"><a href="#延伸阅读" class="headerlink" title="延伸阅读"></a>延伸阅读</h2><p><a href="http://www.infoq.com/cn/articles/react-art-of-simplity" target="_blank" rel="external">深入浅出React（一）：React的设计哲学 - 简单之美</a><br><a href="http://www.infoq.com/cn/articles/react-and-webpack" target="_blank" rel="external">深入浅出React（二）：React开发神器Webpack</a><br><a href="http://www.infoq.com/cn/articles/react-jsx-and-component" target="_blank" rel="external">深入浅出React（三）：理解JSX和组件</a><br><a href="http://www.infoq.com/cn/articles/react-dom-diff" target="_blank" rel="external">深入浅出React（四）：虚拟DOM Diff算法解析</a><br><a href="http://www.infoq.com/cn/articles/react-flux" target="_blank" rel="external">深入浅出React（五）：使用Flux搭建React应用程序架构</a></p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.infoq.com/cn/articles/subversion-front-end-ui-development-framework-react" target="_blank" rel="external">颠覆式前端UI开发框架：React</a><br><a href="https://facebook.github.io/react/docs/thinking-in-react.html" target="_blank" rel="external">Thinking in React</a></p>
 ]]></content>
     </entry>
     
