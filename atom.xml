@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://haolin29.github.io/"/>
-  <updated>2016-03-06T21:58:18.000Z</updated>
+  <updated>2016-05-11T20:06:15.000Z</updated>
   <id>http://haolin29.github.io/</id>
   
   <author>
@@ -14,6 +14,214 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>big-data-review</title>
+    <link href="http://haolin29.github.io/2016/05/11/big-data-review/"/>
+    <id>http://haolin29.github.io/2016/05/11/big-data-review/</id>
+    <published>2016-05-11T20:01:10.000Z</published>
+    <updated>2016-05-11T20:06:15.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;NYU-Big-Data-Final-Review&quot;&gt;&lt;a href=&quot;#NYU-Big-Data-Final-Review&quot; class=&quot;headerlink&quot; title=&quot;NYU Big Data Final Review&quot;&gt;&lt;/a&gt;NYU Big Data Final Review&lt;/h1&gt;&lt;p&gt;Info for final exam:&lt;/p&gt;
+&lt;p&gt;The final exam focuses on post-midterm material mostly, but familiarity with pre-midterm slides and readings will be useful&lt;/p&gt;
+&lt;p&gt;You do not need to re-read research papers, but you should re-read the book sections that were assigned since the midterm exam (Except the Facebook case study - it is not on the exam)&lt;/p&gt;
+&lt;p&gt;You should review post-midterm slides&lt;/p&gt;
+&lt;p&gt;Review the Hive and Impala homework - re-run the commands&lt;/p&gt;
+&lt;p&gt;An understanding of the roles of the mapper and reducer is necessary. &lt;/p&gt;
+&lt;p&gt;Review your old MapReduce programs, re-run them, read the early chapters with the weather example&lt;/p&gt;
+&lt;p&gt;Familiarity with the Wordcount program will be helpful&lt;/p&gt;
+&lt;p&gt;There will likely be at least one program to write and/or interpret&lt;/p&gt;
+&lt;p&gt;Understand MapReduce 1 architecture - know the major compute components: JobTracker, TaskTrackers&lt;/p&gt;
+&lt;p&gt;Understand YARN/MapReduce 2 architecture - know the major compute components: ResourceManager, NodeManager, Application Master&lt;/p&gt;
+&lt;h2 id=&quot;Understand-how-Hadoop-HDFS-MapReduce-works&quot;&gt;&lt;a href=&quot;#Understand-how-Hadoop-HDFS-MapReduce-works&quot; class=&quot;headerlink&quot; title=&quot;Understand how Hadoop (HDFS + MapReduce) works&quot;&gt;&lt;/a&gt;Understand how Hadoop (HDFS + MapReduce) works&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/95833334/%E5%9B%BE%E5%BA%8A/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202016-05-10%2015.45.05.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The client, which submits the MapReduce job.&lt;/li&gt;
+&lt;li&gt;The YARN resource manager, which coordinates the allocation of compute resources on the cluster.&lt;/li&gt;
+&lt;li&gt;The YARN node managers,which launch and monitor the compute containers on machines in the cluster.&lt;/li&gt;
+&lt;li&gt;The MapReduce application master, which coordinates the tasks running the Map‐ Reduce job. The application master and the MapReduce tasks run in containers that are scheduled by the resource manager and managed by the node managers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Understand-the-4-behaviors-of-Autonomic-Computing&quot;&gt;&lt;a href=&quot;#Understand-the-4-behaviors-of-Autonomic-Computing&quot; class=&quot;headerlink&quot; title=&quot;Understand the 4 behaviors of Autonomic Computing&quot;&gt;&lt;/a&gt;Understand the 4 behaviors of Autonomic Computing&lt;/h2&gt;&lt;p&gt;Self-configuring: all configuration should happen with little or no intervention by the user&lt;/p&gt;
+&lt;p&gt;Self-healing: When a progress, service or node stop working, it should repair itself.&lt;/p&gt;
+&lt;p&gt;Self-protecting: Continually assess its own health. Redundant, cooperating health checkers can health check each other. &lt;/p&gt;
+&lt;p&gt;Self-optimizing: Continually assess its own performance.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;perform load-balanceing operation
+
+request resources to maintain a desired level of performance
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There are no Pig programs to write or interpret.&lt;/p&gt;
+&lt;p&gt;There are no HBase, Flume, or Zookeeper programs to write, but you should study the slides&lt;/p&gt;
+&lt;p&gt;Flume is designed for high-volume ingestion into Hadoop of event-based data. &lt;/p&gt;
+&lt;p&gt;There are no Twitter API questions&lt;/p&gt;
+&lt;h2 id=&quot;Review-the-Spark-homework-and-slides&quot;&gt;&lt;a href=&quot;#Review-the-Spark-homework-and-slides&quot; class=&quot;headerlink&quot; title=&quot;Review the Spark homework and slides&quot;&gt;&lt;/a&gt;Review the Spark homework and slides&lt;/h2&gt;&lt;p&gt;Spark is a cluster computing system for fast-running analytics.&lt;/p&gt;
+&lt;p&gt;Unlike map reduce, spark efficiently handle multi-pass applications.&lt;/p&gt;
+&lt;p&gt;RDD = resilient distributed dataset&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hold the data that being processed&lt;/li&gt;
+&lt;li&gt;RDDs can store in memory and can persist from query to query&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;RDDs is not stored with redundancy, but recovery from failure is still possible&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;fault tolerance is provided using the linage information tracked by RDD&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;RDD can re-build itself using linage information &lt;/p&gt;
+&lt;p&gt;  $ file1 = sc.textFile(“myfile.txt”)&lt;br&gt;  $ westLine = file1.filter(lambad line: “West” in line).count()&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;RDD can persist &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;using the persist() or cache() method&lt;/li&gt;
+&lt;li&gt;to disk&lt;/li&gt;
+&lt;li&gt;by replicating it across multiple nodes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All transformation in spark is lazy transformations.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the result is not immediately computed&lt;/li&gt;
+&lt;li&gt;when a result need to be returned to the driver program, all transformation are computed - an action trigger the transformation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;what-is-Oozie-and-how-does-help&quot;&gt;&lt;a href=&quot;#what-is-Oozie-and-how-does-help&quot; class=&quot;headerlink&quot; title=&quot;what is Oozie and how does help&quot;&gt;&lt;/a&gt;what is Oozie and how does help&lt;/h2&gt;&lt;p&gt;Oozie: workflow in hadoop can be scheduled using oozie, using for hadoop and spark workflow control&lt;/p&gt;
+&lt;p&gt;oozie is useful in organizing the processing stage.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;launch processing either in parallel or sequentially&lt;/li&gt;
+&lt;li&gt;prevent processing step from running until earlier prerequisite steps have completed &lt;/li&gt;
+&lt;li&gt;allow map reduce, pig, spark hive etc processing step to be interleaved and run automatically as scripts&lt;/li&gt;
+&lt;li&gt;Oozie workflow is captured in an XML file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Be-able-to-explain-what-an-analytic-is&quot;&gt;&lt;a href=&quot;#Be-able-to-explain-what-an-analytic-is&quot; class=&quot;headerlink&quot; title=&quot;Be able to explain what an analytic is&quot;&gt;&lt;/a&gt;Be able to explain what an analytic is&lt;/h2&gt;&lt;p&gt;Discovery and communication of meaningful patterns in data&lt;/p&gt;
+&lt;p&gt;Especially valuable in areas rich with recorded information&lt;/p&gt;
+&lt;p&gt;Relies on simultaneous application of statistics, computer programming, and operations research&lt;/p&gt;
+&lt;p&gt;Analytics often favors data visualization to communicate insight&lt;/p&gt;
+&lt;p&gt;define the problem&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;formulate the problem to be solved then try to find supporting data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Understand-how-failures-are-detected-handled&quot;&gt;&lt;a href=&quot;#Understand-how-failures-are-detected-handled&quot; class=&quot;headerlink&quot; title=&quot;Understand how failures are detected/handled&quot;&gt;&lt;/a&gt;Understand how failures are detected/handled&lt;/h2&gt;&lt;p&gt;MapReduce 1: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;task failure&lt;ul&gt;
+&lt;li&gt;jvm reports, task tracker handle failure&lt;/li&gt;
+&lt;li&gt;task tracker notices the lack of update, kill jvm process&lt;/li&gt;
+&lt;li&gt;Job tracker notified through task tracker heartbeat message&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;tasktracker failure&lt;ul&gt;
+&lt;li&gt;fails to send heartbeats regularly, job tracker reschedules completed tasks&lt;/li&gt;
+&lt;li&gt;a job tracker can blacklist the task tracker if more than four tasks from some job fail&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;job tracker failure: SPOF in MR1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;YARN:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;task failure&lt;ul&gt;
+&lt;li&gt;task’s JVM reports error back to parent AM, AM marks as failed and freeing up resources&lt;/li&gt;
+&lt;li&gt;JVM exit unexpectedly, NodeManager notices, AM attempt as failed&lt;/li&gt;
+&lt;li&gt;AM notices lack of update, NM marks as failed&lt;/li&gt;
+&lt;li&gt;AM reschedules execution &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;nodemanager failure&lt;ul&gt;
+&lt;li&gt;how to detect? fails to send heartbeat regularly, RM will detect&lt;/li&gt;
+&lt;li&gt;how to handle? RM remove failed NM from the pool&lt;/li&gt;
+&lt;li&gt;if the number of failures for the application is high, an AM can blacklist the NM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;application master failure&lt;ul&gt;
+&lt;li&gt;RM detect the failure from heartbeat &lt;/li&gt;
+&lt;li&gt;the new AM will use job history to recover state of tasks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;resource manager failure&lt;ul&gt;
+&lt;li&gt;the most serious failure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Understand JVM reuse in MR1 vs. uber tasks in YARN&lt;/p&gt;
+&lt;h2 id=&quot;Understand-how-map-reduce-task-progress-is-measured&quot;&gt;&lt;a href=&quot;#Understand-how-map-reduce-task-progress-is-measured&quot; class=&quot;headerlink&quot; title=&quot;Understand how map/reduce task progress is measured&quot;&gt;&lt;/a&gt;Understand how map/reduce task progress is measured&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/95833334/%E5%9B%BE%E5%BA%8A/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202016-05-10%2016.51.37.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Understand Hive, Zookeeper, MapReduce concepts&lt;/p&gt;
+&lt;p&gt;Understand advantages/disadvantages of running a Hadoop cluster in a public cloud&lt;/p&gt;
+&lt;p&gt;high availability &lt;/p&gt;
+&lt;p&gt;HDFS high availability only works if replicas are wisely distributed: but we don’t know the network topology &lt;/p&gt;
+&lt;p&gt;Performance&lt;/p&gt;
+&lt;p&gt;MapReduce map tasks perform best when co-located with the HDFS block to be processed, or as near as possible to the block if co-location is not an option&lt;/p&gt;
+&lt;p&gt;Only if Hadoop co-locates the map task on the same VM with its data block do we know with certainty that the map task is optimally placed in a public cloud&lt;/p&gt;
+&lt;p&gt;If the map task cannot be co-located with the data, there is no way to know whether the VM on which the map task will run is in the same server, same rack, or same datacenter as the data block&lt;/p&gt;
+&lt;p&gt;Sqoop and Oozie material: Be able to describe the purpose of these tools.&lt;/p&gt;
+&lt;p&gt;Sqoop purpose: use sqoop to move data between HDFS and external database, such as mysql&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ sqoop import --connect jdbc:mysql://localhost/my_db_name --table my_table&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;NoSQL&lt;/p&gt;
+&lt;p&gt;什么是NoSQL？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Non-relational databases&lt;/li&gt;
+&lt;li&gt;do not support sql&lt;/li&gt;
+&lt;li&gt;do not guarantee acid properties&lt;/li&gt;
+&lt;li&gt;designed to be distributed across many nodes&lt;/li&gt;
+&lt;li&gt;provide eventual consistency&lt;/li&gt;
+&lt;li&gt;easier to scale up than with relational databases&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;NoSQL database &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;developed to manage large volumes of data that do not necessarily follow a fixed schema&lt;/li&gt;
+&lt;li&gt;data is fragmented and stored across many servers&lt;/li&gt;
+&lt;li&gt;satisfy realtime constraints is the priority&lt;/li&gt;
+&lt;li&gt;joins are not needed, recommendation is that data be de-normalized&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;HBase&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a column family is a grouping of columns&lt;/li&gt;
+&lt;li&gt;columns that belong to a given columns family are physically stored together&lt;/li&gt;
+&lt;li&gt;values are stored in HBase cells&lt;/li&gt;
+&lt;li&gt;cells can be versioned: row key + columnFamily:columnName + Timestamp&lt;/li&gt;
+&lt;li&gt;region: A subset of an HBase table’s rows starting with a starting row key and exclusive of the ending row key&lt;/li&gt;
+&lt;li&gt;read are assisated by the block cache&lt;/li&gt;
+&lt;li&gt;write are assisated by the write ahead log, and then to memstore for quick lookup, when the amount of data in memstore reach a threshold, it is flushed to disk&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hive&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;data warehouse framework&lt;/li&gt;
+&lt;li&gt;built on top of map reduce, contrast with HBase, which is built directly on top of HDFS&lt;/li&gt;
+&lt;li&gt;user data is organized into tables&lt;/li&gt;
+&lt;li&gt;metastore: special table for storing metadata such as table schema&lt;/li&gt;
+&lt;li&gt;schema on read&lt;/li&gt;
+&lt;li&gt;a hive table is essentially an HDFS directory containing one or more files comprise the table&lt;/li&gt;
+&lt;li&gt;don’t support deletes and updates&lt;/li&gt;
+&lt;li&gt;parition: divided a table based on the value of a parition column&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;create external table w1 (data1 string, year int, data2 string, temperature int, quality tinyint, data3 string)&amp;#10;          row format delimited fields terminated by &amp;#39;,&amp;#39;&amp;#10;          location &amp;#39;/user/cloudera/hiveInput/&amp;#39;;&amp;#10;&amp;#10;select * from w1 where year &amp;#62; 1949;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ZooKeeper takeaway&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;four behavior of autonomic computing&lt;ul&gt;
+&lt;li&gt;self-configuring&lt;/li&gt;
+&lt;li&gt;self-healing &lt;/li&gt;
+&lt;li&gt;self-protecting&lt;/li&gt;
+&lt;li&gt;self-optimizing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;for support high availiabilty&lt;/li&gt;
+&lt;li&gt;why we need it?&lt;ul&gt;
+&lt;li&gt;to learn status of self and peers&lt;/li&gt;
+&lt;li&gt;to obtain reliable and timely information&lt;/li&gt;
+&lt;li&gt;simplified user experience&lt;/li&gt;
+&lt;li&gt;difficult to identify root cause of the failure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;what is zk?&lt;ul&gt;
+&lt;li&gt;hadoop distributed coordination service&lt;/li&gt;
+&lt;li&gt;provide tools for simple and safe handling of partial failures&lt;/li&gt;
+&lt;li&gt;facilitate loose coupling &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;YARN&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;uberization mean that the tasks are too small to run in parallel, the AM will run the tasks serially in its own JVM&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;NYU-Big-Data-Final-Review&quot;&gt;&lt;a href=&quot;#NYU-Big-Data-Final-Review&quot; class=&quot;headerlink&quot; title=&quot;NYU Big Data Final Review&quot;&gt;&lt;/a&gt;NYU Big Dat
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>learn and understand react</title>
