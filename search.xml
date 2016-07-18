@@ -4,6 +4,13 @@
   
     
     <entry>
+      <title><![CDATA[test]]></title>
+      <url>http://haolin29.github.io/2016/07/18/test/</url>
+      <content type="html"><![CDATA[<p>This is a test!</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[big-data-review]]></title>
       <url>http://haolin29.github.io/2016/05/11/big-data-review/</url>
       <content type="html"><![CDATA[<h1 id="NYU-Big-Data-Final-Review"><a href="#NYU-Big-Data-Final-Review" class="headerlink" title="NYU Big Data Final Review"></a>NYU Big Data Final Review</h1><p>Info for final exam:</p>

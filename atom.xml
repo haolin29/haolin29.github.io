@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://haolin29.github.io/"/>
-  <updated>2016-07-18T13:33:20.000Z</updated>
+  <updated>2016-07-18T14:13:33.000Z</updated>
   <id>http://haolin29.github.io/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://haolin29.github.io/2016/07/18/test/"/>
+    <id>http://haolin29.github.io/2016/07/18/test/</id>
+    <published>2016-07-18T14:12:49.000Z</published>
+    <updated>2016-07-18T14:13:33.000Z</updated>
+    
+    <content type="html">&lt;p&gt;This is a test!&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This is a test!&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>big-data-review</title>
