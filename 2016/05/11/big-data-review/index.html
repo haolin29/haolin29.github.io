@@ -1,0 +1,1011 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Haolin" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="NYU Big Data Final ReviewInfo for final exam:
+The final exam focuses on post-midterm material mostly, but familiarity with pre-midterm slides and readings will be useful
+You do not need to re-read res">
+<meta property="og:type" content="article">
+<meta property="og:title" content="big-data-review">
+<meta property="og:url" content="http://haolin29.github.io/2016/05/11/big-data-review/index.html">
+<meta property="og:site_name" content="Haolin">
+<meta property="og:description" content="NYU Big Data Final ReviewInfo for final exam:
+The final exam focuses on post-midterm material mostly, but familiarity with pre-midterm slides and readings will be useful
+You do not need to re-read res">
+<meta property="og:image" content="https://dl.dropboxusercontent.com/u/95833334/%E5%9B%BE%E5%BA%8A/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202016-05-10%2015.45.05.jpg">
+<meta property="og:image" content="https://dl.dropboxusercontent.com/u/95833334/%E5%9B%BE%E5%BA%8A/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202016-05-10%2016.51.37.jpg">
+<meta property="og:updated_time" content="2016-07-18T13:33:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="big-data-review">
+<meta name="twitter:description" content="NYU Big Data Final ReviewInfo for final exam:
+The final exam focuses on post-midterm material mostly, but familiarity with pre-midterm slides and readings will be useful
+You do not need to re-read res">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://haolin29.github.io/2016/05/11/big-data-review/"/>
+
+  <title> big-data-review | Haolin </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Haolin</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Personal Knowledge Management</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'EExk-KPF5JPxsFfy5Tzw','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                big-data-review
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-05-11T16:01:10-04:00" content="2016-05-11">
+              2016-05-11
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/11/big-data-review/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/05/11/big-data-review/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="NYU-Big-Data-Final-Review"><a href="#NYU-Big-Data-Final-Review" class="headerlink" title="NYU Big Data Final Review"></a>NYU Big Data Final Review</h1><p>Info for final exam:</p>
+<p>The final exam focuses on post-midterm material mostly, but familiarity with pre-midterm slides and readings will be useful</p>
+<p>You do not need to re-read research papers, but you should re-read the book sections that were assigned since the midterm exam (Except the Facebook case study - it is not on the exam)</p>
+<p>You should review post-midterm slides</p>
+<p>Review the Hive and Impala homework - re-run the commands</p>
+<p>An understanding of the roles of the mapper and reducer is necessary. </p>
+<p>Review your old MapReduce programs, re-run them, read the early chapters with the weather example</p>
+<p>Familiarity with the Wordcount program will be helpful</p>
+<p>There will likely be at least one program to write and/or interpret</p>
+<p>Understand MapReduce 1 architecture - know the major compute components: JobTracker, TaskTrackers</p>
+<p>Understand YARN/MapReduce 2 architecture - know the major compute components: ResourceManager, NodeManager, Application Master</p>
+<a id="more"></a>
+<h2 id="Understand-how-Hadoop-HDFS-MapReduce-works"><a href="#Understand-how-Hadoop-HDFS-MapReduce-works" class="headerlink" title="Understand how Hadoop (HDFS + MapReduce) works"></a>Understand how Hadoop (HDFS + MapReduce) works</h2><p><img src="https://dl.dropboxusercontent.com/u/95833334/%E5%9B%BE%E5%BA%8A/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202016-05-10%2015.45.05.jpg" alt=""></p>
+<ul>
+<li>The client, which submits the MapReduce job.</li>
+<li>The YARN resource manager, which coordinates the allocation of compute resources on the cluster.</li>
+<li>The YARN node managers,which launch and monitor the compute containers on machines in the cluster.</li>
+<li>The MapReduce application master, which coordinates the tasks running the Map‐ Reduce job. The application master and the MapReduce tasks run in containers that are scheduled by the resource manager and managed by the node managers.</li>
+</ul>
+<h2 id="Understand-the-4-behaviors-of-Autonomic-Computing"><a href="#Understand-the-4-behaviors-of-Autonomic-Computing" class="headerlink" title="Understand the 4 behaviors of Autonomic Computing"></a>Understand the 4 behaviors of Autonomic Computing</h2><p>Self-configuring: all configuration should happen with little or no intervention by the user</p>
+<p>Self-healing: When a progress, service or node stop working, it should repair itself.</p>
+<p>Self-protecting: Continually assess its own health. Redundant, cooperating health checkers can health check each other. </p>
+<p>Self-optimizing: Continually assess its own performance.</p>
+<pre><code>perform load-balanceing operation
+
+request resources to maintain a desired level of performance
+</code></pre><p>There are no Pig programs to write or interpret.</p>
+<p>There are no HBase, Flume, or Zookeeper programs to write, but you should study the slides</p>
+<p>Flume is designed for high-volume ingestion into Hadoop of event-based data. </p>
+<p>There are no Twitter API questions</p>
+<h2 id="Review-the-Spark-homework-and-slides"><a href="#Review-the-Spark-homework-and-slides" class="headerlink" title="Review the Spark homework and slides"></a>Review the Spark homework and slides</h2><p>Spark is a cluster computing system for fast-running analytics.</p>
+<p>Unlike map reduce, spark efficiently handle multi-pass applications.</p>
+<p>RDD = resilient distributed dataset</p>
+<ul>
+<li>hold the data that being processed</li>
+<li>RDDs can store in memory and can persist from query to query</li>
+</ul>
+<p>RDDs is not stored with redundancy, but recovery from failure is still possible</p>
+<ul>
+<li>fault tolerance is provided using the linage information tracked by RDD</li>
+<li><p>RDD can re-build itself using linage information </p>
+<p>  $ file1 = sc.textFile(“myfile.txt”)<br>  $ westLine = file1.filter(lambad line: “West” in line).count()</p>
+</li>
+</ul>
+<p>RDD can persist </p>
+<ul>
+<li>using the persist() or cache() method</li>
+<li>to disk</li>
+<li>by replicating it across multiple nodes</li>
+</ul>
+<p>All transformation in spark is lazy transformations.</p>
+<ul>
+<li>the result is not immediately computed</li>
+<li>when a result need to be returned to the driver program, all transformation are computed - an action trigger the transformation</li>
+</ul>
+<h2 id="what-is-Oozie-and-how-does-help"><a href="#what-is-Oozie-and-how-does-help" class="headerlink" title="what is Oozie and how does help"></a>what is Oozie and how does help</h2><p>Oozie: workflow in hadoop can be scheduled using oozie, using for hadoop and spark workflow control</p>
+<p>oozie is useful in organizing the processing stage.</p>
+<ul>
+<li>launch processing either in parallel or sequentially</li>
+<li>prevent processing step from running until earlier prerequisite steps have completed </li>
+<li>allow map reduce, pig, spark hive etc processing step to be interleaved and run automatically as scripts</li>
+<li>Oozie workflow is captured in an XML file.</li>
+</ul>
+<h2 id="Be-able-to-explain-what-an-analytic-is"><a href="#Be-able-to-explain-what-an-analytic-is" class="headerlink" title="Be able to explain what an analytic is"></a>Be able to explain what an analytic is</h2><p>Discovery and communication of meaningful patterns in data</p>
+<p>Especially valuable in areas rich with recorded information</p>
+<p>Relies on simultaneous application of statistics, computer programming, and operations research</p>
+<p>Analytics often favors data visualization to communicate insight</p>
+<p>define the problem</p>
+<ul>
+<li>formulate the problem to be solved then try to find supporting data</li>
+</ul>
+<h2 id="Understand-how-failures-are-detected-handled"><a href="#Understand-how-failures-are-detected-handled" class="headerlink" title="Understand how failures are detected/handled"></a>Understand how failures are detected/handled</h2><p>MapReduce 1: </p>
+<ul>
+<li>task failure<ul>
+<li>jvm reports, task tracker handle failure</li>
+<li>task tracker notices the lack of update, kill jvm process</li>
+<li>Job tracker notified through task tracker heartbeat message</li>
+</ul>
+</li>
+<li>tasktracker failure<ul>
+<li>fails to send heartbeats regularly, job tracker reschedules completed tasks</li>
+<li>a job tracker can blacklist the task tracker if more than four tasks from some job fail</li>
+</ul>
+</li>
+<li>job tracker failure: SPOF in MR1</li>
+</ul>
+<p>YARN:</p>
+<ul>
+<li>task failure<ul>
+<li>task’s JVM reports error back to parent AM, AM marks as failed and freeing up resources</li>
+<li>JVM exit unexpectedly, NodeManager notices, AM attempt as failed</li>
+<li>AM notices lack of update, NM marks as failed</li>
+<li>AM reschedules execution </li>
+</ul>
+</li>
+<li>nodemanager failure<ul>
+<li>how to detect? fails to send heartbeat regularly, RM will detect</li>
+<li>how to handle? RM remove failed NM from the pool</li>
+<li>if the number of failures for the application is high, an AM can blacklist the NM</li>
+</ul>
+</li>
+<li>application master failure<ul>
+<li>RM detect the failure from heartbeat </li>
+<li>the new AM will use job history to recover state of tasks</li>
+</ul>
+</li>
+<li>resource manager failure<ul>
+<li>the most serious failure</li>
+</ul>
+</li>
+</ul>
+<p>Understand JVM reuse in MR1 vs. uber tasks in YARN</p>
+<h2 id="Understand-how-map-reduce-task-progress-is-measured"><a href="#Understand-how-map-reduce-task-progress-is-measured" class="headerlink" title="Understand how map/reduce task progress is measured"></a>Understand how map/reduce task progress is measured</h2><p><img src="https://dl.dropboxusercontent.com/u/95833334/%E5%9B%BE%E5%BA%8A/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202016-05-10%2016.51.37.jpg" alt=""></p>
+<p>Understand Hive, Zookeeper, MapReduce concepts</p>
+<p>Understand advantages/disadvantages of running a Hadoop cluster in a public cloud</p>
+<p>high availability </p>
+<p>HDFS high availability only works if replicas are wisely distributed: but we don’t know the network topology </p>
+<p>Performance</p>
+<p>MapReduce map tasks perform best when co-located with the HDFS block to be processed, or as near as possible to the block if co-location is not an option</p>
+<p>Only if Hadoop co-locates the map task on the same VM with its data block do we know with certainty that the map task is optimally placed in a public cloud</p>
+<p>If the map task cannot be co-located with the data, there is no way to know whether the VM on which the map task will run is in the same server, same rack, or same datacenter as the data block</p>
+<p>Sqoop and Oozie material: Be able to describe the purpose of these tools.</p>
+<p>Sqoop purpose: use sqoop to move data between HDFS and external database, such as mysql</p>
+<p><code>$ sqoop import --connect jdbc:mysql://localhost/my_db_name --table my_table</code></p>
+<p>NoSQL</p>
+<p>什么是NoSQL？</p>
+<ul>
+<li>Non-relational databases</li>
+<li>do not support sql</li>
+<li>do not guarantee acid properties</li>
+<li>designed to be distributed across many nodes</li>
+<li>provide eventual consistency</li>
+<li>easier to scale up than with relational databases</li>
+</ul>
+<p>NoSQL database </p>
+<ul>
+<li>developed to manage large volumes of data that do not necessarily follow a fixed schema</li>
+<li>data is fragmented and stored across many servers</li>
+<li>satisfy realtime constraints is the priority</li>
+<li>joins are not needed, recommendation is that data be de-normalized</li>
+</ul>
+<p>HBase</p>
+<ul>
+<li>a column family is a grouping of columns</li>
+<li>columns that belong to a given columns family are physically stored together</li>
+<li>values are stored in HBase cells</li>
+<li>cells can be versioned: row key + columnFamily:columnName + Timestamp</li>
+<li>region: A subset of an HBase table’s rows starting with a starting row key and exclusive of the ending row key</li>
+<li>read are assisated by the block cache</li>
+<li>write are assisated by the write ahead log, and then to memstore for quick lookup, when the amount of data in memstore reach a threshold, it is flushed to disk</li>
+</ul>
+<p>Hive</p>
+<ul>
+<li>data warehouse framework</li>
+<li>built on top of map reduce, contrast with HBase, which is built directly on top of HDFS</li>
+<li>user data is organized into tables</li>
+<li>metastore: special table for storing metadata such as table schema</li>
+<li>schema on read</li>
+<li>a hive table is essentially an HDFS directory containing one or more files comprise the table</li>
+<li>don’t support deletes and updates</li>
+<li>parition: divided a table based on the value of a parition column<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create external table w1 (data1 string, year int, data2 string, temperature int, quality tinyint, data3 string)&#10;          row format delimited fields terminated by &#39;,&#39;&#10;          location &#39;/user/cloudera/hiveInput/&#39;;&#10;&#10;select * from w1 where year &#62; 1949;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>ZooKeeper takeaway</p>
+<ul>
+<li>four behavior of autonomic computing<ul>
+<li>self-configuring</li>
+<li>self-healing </li>
+<li>self-protecting</li>
+<li>self-optimizing</li>
+</ul>
+</li>
+<li>for support high availiabilty</li>
+<li>why we need it?<ul>
+<li>to learn status of self and peers</li>
+<li>to obtain reliable and timely information</li>
+<li>simplified user experience</li>
+<li>difficult to identify root cause of the failure</li>
+</ul>
+</li>
+<li>what is zk?<ul>
+<li>hadoop distributed coordination service</li>
+<li>provide tools for simple and safe handling of partial failures</li>
+<li>facilitate loose coupling </li>
+</ul>
+</li>
+</ul>
+<p>YARN</p>
+<ul>
+<li>uberization mean that the tasks are too small to run in parallel, the AM will run the tasks serially in its own JVM</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/06/learn-and-understand-react/" rel="next" title="learn and understand react">
+                <i class="fa fa-chevron-left"></i> learn and understand react
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/18/test/" rel="prev" title="test">
+                test <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/7300278?v=3&s=460"
+               alt="Haolin Ju" />
+          <p class="site-author-name" itemprop="name">Haolin Ju</p>
+          <p class="site-description motion-element" itemprop="description">Personal Knowledge Management</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/haolin29" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/haolinju" target="_blank" title="LinkedIn">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  LinkedIn
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#NYU-Big-Data-Final-Review"><span class="nav-text">NYU Big Data Final Review</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Understand-how-Hadoop-HDFS-MapReduce-works"><span class="nav-text">Understand how Hadoop (HDFS + MapReduce) works</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Understand-the-4-behaviors-of-Autonomic-Computing"><span class="nav-text">Understand the 4 behaviors of Autonomic Computing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Review-the-Spark-homework-and-slides"><span class="nav-text">Review the Spark homework and slides</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#what-is-Oozie-and-how-does-help"><span class="nav-text">what is Oozie and how does help</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Be-able-to-explain-what-an-analytic-is"><span class="nav-text">Be able to explain what an analytic is</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Understand-how-failures-are-detected-handled"><span class="nav-text">Understand how failures are detected/handled</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Understand-how-map-reduce-task-progress-is-measured"><span class="nav-text">Understand how map/reduce task progress is measured</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Haolin Ju</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'haolin29';
+      var disqus_identifier = '2016/05/11/big-data-review/';
+      var disqus_title = "big-data-review";
+      var disqus_url = 'http://haolin29.github.io/2016/05/11/big-data-review/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+
+</body>
+</html>
