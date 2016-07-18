@@ -4,218 +4,15 @@
   
     
     <entry>
-      <title><![CDATA[test]]></title>
-      <url>http://haolin29.github.io/2016/07/18/test/</url>
-      <content type="html"><![CDATA[<p>This is a test!</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[big-data-review]]></title>
-      <url>http://haolin29.github.io/2016/05/11/big-data-review/</url>
-      <content type="html"><![CDATA[<h1 id="NYU-Big-Data-Final-Review"><a href="#NYU-Big-Data-Final-Review" class="headerlink" title="NYU Big Data Final Review"></a>NYU Big Data Final Review</h1><p>Info for final exam:</p>
-<p>The final exam focuses on post-midterm material mostly, but familiarity with pre-midterm slides and readings will be useful</p>
-<p>You do not need to re-read research papers, but you should re-read the book sections that were assigned since the midterm exam (Except the Facebook case study - it is not on the exam)</p>
-<p>You should review post-midterm slides</p>
-<p>Review the Hive and Impala homework - re-run the commands</p>
-<p>An understanding of the roles of the mapper and reducer is necessary. </p>
-<p>Review your old MapReduce programs, re-run them, read the early chapters with the weather example</p>
-<p>Familiarity with the Wordcount program will be helpful</p>
-<p>There will likely be at least one program to write and/or interpret</p>
-<p>Understand MapReduce 1 architecture - know the major compute components: JobTracker, TaskTrackers</p>
-<p>Understand YARN/MapReduce 2 architecture - know the major compute components: ResourceManager, NodeManager, Application Master</p>
-<a id="more"></a>
-<h2 id="Understand-how-Hadoop-HDFS-MapReduce-works"><a href="#Understand-how-Hadoop-HDFS-MapReduce-works" class="headerlink" title="Understand how Hadoop (HDFS + MapReduce) works"></a>Understand how Hadoop (HDFS + MapReduce) works</h2><p><img src="https://dl.dropboxusercontent.com/u/95833334/%E5%9B%BE%E5%BA%8A/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202016-05-10%2015.45.05.jpg" alt=""></p>
-<ul>
-<li>The client, which submits the MapReduce job.</li>
-<li>The YARN resource manager, which coordinates the allocation of compute resources on the cluster.</li>
-<li>The YARN node managers,which launch and monitor the compute containers on machines in the cluster.</li>
-<li>The MapReduce application master, which coordinates the tasks running the Map‐ Reduce job. The application master and the MapReduce tasks run in containers that are scheduled by the resource manager and managed by the node managers.</li>
-</ul>
-<h2 id="Understand-the-4-behaviors-of-Autonomic-Computing"><a href="#Understand-the-4-behaviors-of-Autonomic-Computing" class="headerlink" title="Understand the 4 behaviors of Autonomic Computing"></a>Understand the 4 behaviors of Autonomic Computing</h2><p>Self-configuring: all configuration should happen with little or no intervention by the user</p>
-<p>Self-healing: When a progress, service or node stop working, it should repair itself.</p>
-<p>Self-protecting: Continually assess its own health. Redundant, cooperating health checkers can health check each other. </p>
-<p>Self-optimizing: Continually assess its own performance.</p>
-<pre><code>perform load-balanceing operation
-
-request resources to maintain a desired level of performance
-</code></pre><p>There are no Pig programs to write or interpret.</p>
-<p>There are no HBase, Flume, or Zookeeper programs to write, but you should study the slides</p>
-<p>Flume is designed for high-volume ingestion into Hadoop of event-based data. </p>
-<p>There are no Twitter API questions</p>
-<h2 id="Review-the-Spark-homework-and-slides"><a href="#Review-the-Spark-homework-and-slides" class="headerlink" title="Review the Spark homework and slides"></a>Review the Spark homework and slides</h2><p>Spark is a cluster computing system for fast-running analytics.</p>
-<p>Unlike map reduce, spark efficiently handle multi-pass applications.</p>
-<p>RDD = resilient distributed dataset</p>
-<ul>
-<li>hold the data that being processed</li>
-<li>RDDs can store in memory and can persist from query to query</li>
-</ul>
-<p>RDDs is not stored with redundancy, but recovery from failure is still possible</p>
-<ul>
-<li>fault tolerance is provided using the linage information tracked by RDD</li>
-<li><p>RDD can re-build itself using linage information </p>
-<p>  $ file1 = sc.textFile(“myfile.txt”)<br>  $ westLine = file1.filter(lambad line: “West” in line).count()</p>
-</li>
-</ul>
-<p>RDD can persist </p>
-<ul>
-<li>using the persist() or cache() method</li>
-<li>to disk</li>
-<li>by replicating it across multiple nodes</li>
-</ul>
-<p>All transformation in spark is lazy transformations.</p>
-<ul>
-<li>the result is not immediately computed</li>
-<li>when a result need to be returned to the driver program, all transformation are computed - an action trigger the transformation</li>
-</ul>
-<h2 id="what-is-Oozie-and-how-does-help"><a href="#what-is-Oozie-and-how-does-help" class="headerlink" title="what is Oozie and how does help"></a>what is Oozie and how does help</h2><p>Oozie: workflow in hadoop can be scheduled using oozie, using for hadoop and spark workflow control</p>
-<p>oozie is useful in organizing the processing stage.</p>
-<ul>
-<li>launch processing either in parallel or sequentially</li>
-<li>prevent processing step from running until earlier prerequisite steps have completed </li>
-<li>allow map reduce, pig, spark hive etc processing step to be interleaved and run automatically as scripts</li>
-<li>Oozie workflow is captured in an XML file.</li>
-</ul>
-<h2 id="Be-able-to-explain-what-an-analytic-is"><a href="#Be-able-to-explain-what-an-analytic-is" class="headerlink" title="Be able to explain what an analytic is"></a>Be able to explain what an analytic is</h2><p>Discovery and communication of meaningful patterns in data</p>
-<p>Especially valuable in areas rich with recorded information</p>
-<p>Relies on simultaneous application of statistics, computer programming, and operations research</p>
-<p>Analytics often favors data visualization to communicate insight</p>
-<p>define the problem</p>
-<ul>
-<li>formulate the problem to be solved then try to find supporting data</li>
-</ul>
-<h2 id="Understand-how-failures-are-detected-handled"><a href="#Understand-how-failures-are-detected-handled" class="headerlink" title="Understand how failures are detected/handled"></a>Understand how failures are detected/handled</h2><p>MapReduce 1: </p>
-<ul>
-<li>task failure<ul>
-<li>jvm reports, task tracker handle failure</li>
-<li>task tracker notices the lack of update, kill jvm process</li>
-<li>Job tracker notified through task tracker heartbeat message</li>
-</ul>
-</li>
-<li>tasktracker failure<ul>
-<li>fails to send heartbeats regularly, job tracker reschedules completed tasks</li>
-<li>a job tracker can blacklist the task tracker if more than four tasks from some job fail</li>
-</ul>
-</li>
-<li>job tracker failure: SPOF in MR1</li>
-</ul>
-<p>YARN:</p>
-<ul>
-<li>task failure<ul>
-<li>task’s JVM reports error back to parent AM, AM marks as failed and freeing up resources</li>
-<li>JVM exit unexpectedly, NodeManager notices, AM attempt as failed</li>
-<li>AM notices lack of update, NM marks as failed</li>
-<li>AM reschedules execution </li>
-</ul>
-</li>
-<li>nodemanager failure<ul>
-<li>how to detect? fails to send heartbeat regularly, RM will detect</li>
-<li>how to handle? RM remove failed NM from the pool</li>
-<li>if the number of failures for the application is high, an AM can blacklist the NM</li>
-</ul>
-</li>
-<li>application master failure<ul>
-<li>RM detect the failure from heartbeat </li>
-<li>the new AM will use job history to recover state of tasks</li>
-</ul>
-</li>
-<li>resource manager failure<ul>
-<li>the most serious failure</li>
-</ul>
-</li>
-</ul>
-<p>Understand JVM reuse in MR1 vs. uber tasks in YARN</p>
-<h2 id="Understand-how-map-reduce-task-progress-is-measured"><a href="#Understand-how-map-reduce-task-progress-is-measured" class="headerlink" title="Understand how map/reduce task progress is measured"></a>Understand how map/reduce task progress is measured</h2><p><img src="https://dl.dropboxusercontent.com/u/95833334/%E5%9B%BE%E5%BA%8A/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202016-05-10%2016.51.37.jpg" alt=""></p>
-<p>Understand Hive, Zookeeper, MapReduce concepts</p>
-<p>Understand advantages/disadvantages of running a Hadoop cluster in a public cloud</p>
-<p>high availability </p>
-<p>HDFS high availability only works if replicas are wisely distributed: but we don’t know the network topology </p>
-<p>Performance</p>
-<p>MapReduce map tasks perform best when co-located with the HDFS block to be processed, or as near as possible to the block if co-location is not an option</p>
-<p>Only if Hadoop co-locates the map task on the same VM with its data block do we know with certainty that the map task is optimally placed in a public cloud</p>
-<p>If the map task cannot be co-located with the data, there is no way to know whether the VM on which the map task will run is in the same server, same rack, or same datacenter as the data block</p>
-<p>Sqoop and Oozie material: Be able to describe the purpose of these tools.</p>
-<p>Sqoop purpose: use sqoop to move data between HDFS and external database, such as mysql</p>
-<p><code>$ sqoop import --connect jdbc:mysql://localhost/my_db_name --table my_table</code></p>
-<p>NoSQL</p>
-<p>什么是NoSQL？</p>
-<ul>
-<li>Non-relational databases</li>
-<li>do not support sql</li>
-<li>do not guarantee acid properties</li>
-<li>designed to be distributed across many nodes</li>
-<li>provide eventual consistency</li>
-<li>easier to scale up than with relational databases</li>
-</ul>
-<p>NoSQL database </p>
-<ul>
-<li>developed to manage large volumes of data that do not necessarily follow a fixed schema</li>
-<li>data is fragmented and stored across many servers</li>
-<li>satisfy realtime constraints is the priority</li>
-<li>joins are not needed, recommendation is that data be de-normalized</li>
-</ul>
-<p>HBase</p>
-<ul>
-<li>a column family is a grouping of columns</li>
-<li>columns that belong to a given columns family are physically stored together</li>
-<li>values are stored in HBase cells</li>
-<li>cells can be versioned: row key + columnFamily:columnName + Timestamp</li>
-<li>region: A subset of an HBase table’s rows starting with a starting row key and exclusive of the ending row key</li>
-<li>read are assisated by the block cache</li>
-<li>write are assisated by the write ahead log, and then to memstore for quick lookup, when the amount of data in memstore reach a threshold, it is flushed to disk</li>
-</ul>
-<p>Hive</p>
-<ul>
-<li>data warehouse framework</li>
-<li>built on top of map reduce, contrast with HBase, which is built directly on top of HDFS</li>
-<li>user data is organized into tables</li>
-<li>metastore: special table for storing metadata such as table schema</li>
-<li>schema on read</li>
-<li>a hive table is essentially an HDFS directory containing one or more files comprise the table</li>
-<li>don’t support deletes and updates</li>
-<li>parition: divided a table based on the value of a parition column<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create external table w1 (data1 string, year int, data2 string, temperature int, quality tinyint, data3 string)&#10;          row format delimited fields terminated by &#39;,&#39;&#10;          location &#39;/user/cloudera/hiveInput/&#39;;&#10;&#10;select * from w1 where year &#62; 1949;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>ZooKeeper takeaway</p>
-<ul>
-<li>four behavior of autonomic computing<ul>
-<li>self-configuring</li>
-<li>self-healing </li>
-<li>self-protecting</li>
-<li>self-optimizing</li>
-</ul>
-</li>
-<li>for support high availiabilty</li>
-<li>why we need it?<ul>
-<li>to learn status of self and peers</li>
-<li>to obtain reliable and timely information</li>
-<li>simplified user experience</li>
-<li>difficult to identify root cause of the failure</li>
-</ul>
-</li>
-<li>what is zk?<ul>
-<li>hadoop distributed coordination service</li>
-<li>provide tools for simple and safe handling of partial failures</li>
-<li>facilitate loose coupling </li>
-</ul>
-</li>
-</ul>
-<p>YARN</p>
-<ul>
-<li>uberization mean that the tasks are too small to run in parallel, the AM will run the tasks serially in its own JVM</li>
-</ul>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[learn and understand react]]></title>
       <url>http://haolin29.github.io/2016/03/06/learn-and-understand-react/</url>
-      <content type="html"><![CDATA[<h1 id="初识-React-js"><a href="#初识-React-js" class="headerlink" title="初识 React.js"></a>初识 React.js</h1><h2 id="什么是React？"><a href="#什么是React？" class="headerlink" title="什么是React？"></a>什么是React？</h2><p>很多人可能会对这个问题感到困惑。React 其实不是Augular.js 或者 Backbone.js 那样的MVC 框架。 它只是MVC中的V — 也就是表现层， react 只做一件事，这也是符合UNIX的思路。按官网描述，其出发点为：</p>
+      <content type="html"><![CDATA[<h1 id="初识-React-js"><a href="#初识-React-js" class="headerlink" title="初识 React.js"></a>初识 React.js</h1><h2 id="什么是React？"><a href="#什么是React？" class="headerlink" title="什么是React？"></a>什么是React？</h2><p>很多人可能会对这个问题感到困惑。React 其实不是Augular.js 或者 Backbone.js 那样的MVC 框架。 它只是MVC中的V — 也就是表现层， react 只做一件事，这也是符合UNIX的思路。</p>
+<a id="more"></a>
+<p>按官网描述，其出发点为：</p>
 <blockquote>
 <p>用于开发数据不断变化的大型应用程序（Building large applications with data that changes over time）。</p>
 </blockquote>
 <p>React最初来自Facebook内部的广告系统项目，项目实施过程中前端开发遇到了巨大挑战，代码变得越来越臃肿且混乱不堪，难以维护。于是痛定思痛，他们决定抛开很多所谓的“最佳实践”，重新思考前端界面的构建方式，于是就有了React。</p>
-<a id="more"></a>
 <h2 id="React的原理"><a href="#React的原理" class="headerlink" title="React的原理"></a>React的原理</h2><p>在Web开发中，我们常需要将动态数据实时反映到UI上，这就需要产生对DOM的操作。而复杂和频繁的DOM操作会产生性能瓶颈 (DOM对象本身也是一个js对象，所以严格来说，并不是操作这个对象慢，而是说操作了这个对象后，会触发一些浏览器行为，比如布局和绘制，这些会导致整个文档布局的重新计算）。因此，React引入了 Virtual DOM 的机制：</p>
 <p><img src="https://dl.dropboxusercontent.com/u/95833334/%E5%9B%BE%E5%BA%8A/React/virtual%20dom.png" alt=""></p>
 <pre><code>Virtual DOM 是一个模拟 DOM 树的 JavaScript 对象。 React 使用 Virtual DOM 来渲染 UI，当组件状态`state` 有更改的时候，React 会自动调用组件的 `render` 方法重新渲染整个组件的 UI。
@@ -272,143 +69,16 @@ request resources to maintain a desired level of performance
     </entry>
     
     <entry>
-      <title><![CDATA[tmux cheatsheet]]></title>
-      <url>http://haolin29.github.io/2016/02/28/tmux-cheatsheet/</url>
-      <content type="html"><![CDATA[<h1 id="tmux-cheatsheet"><a href="#tmux-cheatsheet" class="headerlink" title="tmux cheatsheet"></a>tmux cheatsheet</h1><h2 id="新建会话"><a href="#新建会话" class="headerlink" title="新建会话"></a>新建会话</h2><p><code>tmux new -s session-name</code></p>
-<h2 id="离开会话"><a href="#离开会话" class="headerlink" title="离开会话"></a>离开会话</h2><p><code>ctrl-a d</code></p>
-<p>tumx detach</p>
-<h2 id="接入之前的会话"><a href="#接入之前的会话" class="headerlink" title="接入之前的会话"></a>接入之前的会话</h2><p>tmux a</p>
-<p>tumx a -t session-name</p>
-<h2 id="关闭会话"><a href="#关闭会话" class="headerlink" title="关闭会话"></a>关闭会话</h2><p>tumx kill-session -t session-name</p>
-<p>tumx killall 同时关闭tmux</p>
-<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p><code>~/.tmxu.conf</code></p>
-<h2 id="窗口操作"><a href="#窗口操作" class="headerlink" title="窗口操作:"></a>窗口操作:</h2><table>
-<thead>
-<tr>
-<th>c</th>
-<th>创建新窗口</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&amp;</td>
-<td>关闭当前窗口</td>
-</tr>
-<tr>
-<td>数字键</td>
-<td>切换到指定窗口</td>
-</tr>
-<tr>
-<td>p</td>
-<td>切换至上一窗口</td>
-</tr>
-<tr>
-<td>n</td>
-<td>切换至下一窗口</td>
-</tr>
-<tr>
-<td>l</td>
-<td>前后窗口间互相切换</td>
-</tr>
-<tr>
-<td>w</td>
-<td>通过窗口列表切换窗口</td>
-</tr>
-<tr>
-<td>,</td>
-<td>重命名当前窗口，便于识别</td>
-</tr>
-<tr>
-<td>.</td>
-<td>修改当前窗口编号，相当于重新排序</td>
-</tr>
-<tr>
-<td>f</td>
-<td>在所有窗口中查找关键词，便于窗口多了切换</td>
-</tr>
-</tbody>
-</table>
-<p>面板操作:</p>
-<table>
-<thead>
-<tr>
-<th>“</th>
-<th>将当前面板上下分屏</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>%</td>
-<td>将当前面板左右分屏</td>
-</tr>
-<tr>
-<td>x</td>
-<td>关闭当前分屏</td>
-</tr>
-<tr>
-<td>!</td>
-<td>将当前面板置于新窗口,即新建一个窗口,其中仅包含当前面板</td>
-</tr>
-<tr>
-<td>Ctrl+方向键</td>
-<td>以1个单元格为单位移动边缘以调整当前面板大小</td>
-</tr>
-<tr>
-<td>Alt+方向键</td>
-<td>以5个单元格为单位移动边缘以调整当前面板大小</td>
-</tr>
-<tr>
-<td>空格键</td>
-<td>可以在默认面板布局中切换，试试就知道了</td>
-</tr>
-<tr>
-<td>q</td>
-<td>显示面板编号</td>
-</tr>
-<tr>
-<td>o</td>
-<td>选择当前窗口中下一个面板</td>
-</tr>
-<tr>
-<td>方向键</td>
-<td>移动光标选择对应面板</td>
-</tr>
-<tr>
-<td>{</td>
-<td>向前置换当前面板</td>
-</tr>
-<tr>
-<td>}</td>
-<td>向后置换当前面板</td>
-</tr>
-<tr>
-<td>Alt+o</td>
-<td>逆时针旋转当前窗口的面板</td>
-</tr>
-<tr>
-<td>Ctrl+o</td>
-<td>顺时针旋转当前窗口的面板</td>
-</tr>
-<tr>
-<td>z</td>
-<td>tmux 1.8新特性，最大化当前所在面板</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[为什么开始写博客]]></title>
       <url>http://haolin29.github.io/2016/02/28/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%80%E5%A7%8B%E5%86%99%E5%8D%9A%E5%AE%A2/</url>
       <content type="html"><![CDATA[<p>受一篇文章启发，决定开始写博客，把自己的想法记录下来，形成知识脉络。<br>文章转载如下：</p>
 <h1 id="为什么你应该（从现在开始就）写博客"><a href="#为什么你应该（从现在开始就）写博客" class="headerlink" title="为什么你应该（从现在开始就）写博客"></a><a href="http://mindhacks.cn/2009/02/15/why-you-should-start-blogging-now/" target="_blank" rel="external">为什么你应该（从现在开始就）写博客</a></h1><h2 id="（一）为什么你应该（从现在开始就）写博客"><a href="#（一）为什么你应该（从现在开始就）写博客" class="headerlink" title="（一）为什么你应该（从现在开始就）写博客"></a>（一）为什么你应该（从现在开始就）写博客</h2><p>用一句话来说就是，<strong>写一个博客有很多好处，却没有任何明显的坏处。</strong></p>
+<a id="more"></a>
 <p>让我说得更明确一点：用博客的形式来记录下你有价值的思考，会带来很多好处，却没有任何明显的坏处。Note：碎碎念不算思考、心情琐记不算思考、唠唠叨叨也不算思考、没话找话也不算思考，请以此类推。</p>
 <p>下面是我个人认为写一个长期的 <strong>价值博客</strong> 的最大的几点好处：</p>
 <p>1) <strong>能够交到很多志同道合的朋友</strong>。我自己既写博客，也读别人的博客，在这个时代，对于生活中的绝大多数人来说，拓宽朋友圈子的途径几乎只有一个，通过网络，而如何在网络中寻找到气味相投的朋友，如何判断别人和自己是否有共同语言？显然，通过天天在SNS上碎碎念的那些日记是难以做到的。我佩服的一些朋友几乎全都是长期用博客记录想法的人，<strong>因此，和他们即便不打照面，也是心照不宣</strong>。即便素未谋面也能坐下来就聊得热火朝天。</p>
 <p>为什么博客在结交志同道合的朋友方面的潜力要远胜于原始的交谈方式？很简单，第一，博客无地域限制，整个互联网上从A到B只有一个点击的距离，而传统的建立朋友圈子的方法则受到地域限制。第二，也是更重要的一点，即如果按照以前结交朋友的方式，需要互相聊天，交流观点，然后才逐渐熟悉起来，这需要一个较长的过程，而且更糟糕的是，当你遇到另一个陌生人，又要把整个过程重复一次，表达你已经对老友表达过的那番想法。可博客却做到了“一次表达，无数次阅读”，当我看到一个写了好几年的博客，看完了之后我仿佛和这个人交谈了很久，用程序员们喜欢听的话来说就是，<strong>“博客极大地增强了话语的复用性”</strong>。</p>
 <p>我曾在CSDN上写了近六年的博客，在一年半前建立了一个Google Groups（TopLanguage），由于我的博客的长期阅读者都是互相有共同语言的，因此这个Group一开始就热火朝天，而高质量的技术讨论则进一步吸引了更多的牛人的参与，雪球滚起来之后，就很难停下来了，将近一年半下来，从这个Group的讨论中我获益良多[1]。而对于非程序员朋友，科学松鼠会则是一个很好的例子。</p>
-<a id="more"></a>
 <p>2) <a href="http://mindhacks.cn/2009/02/09/writing-is-better-thinking/" target="_blank" rel="external">书写是为了更好的思考</a>。我在《书写是为了更好的思考》里面详细总结了书写的好处，这里就不拷贝粘贴了。有些想法如果不写下来，也就忘掉了，有一个广为流传的《数学牛人们的轶事》（荣耀属于ukim）里面讲了希尔伯特的一个故事：一次在Hilbert的讨论班上，一个年轻人报告，其中用了一个很漂亮的定理，Hilbert说“这真是一个妙不可言（wunderbaschon）的定理呀,是谁发现的？”那个年轻人茫然的站了很久，对Hilbert说：“是你.……”。</p>
 <p>3) <strong>“教”是最好的“学”</strong>。如果一件事情你不能讲清楚，十有八九你还没有完全理解。绝大多数人应该都知道在程序员行业面试官经常要求你讲解一个东西给他听，他会说他不懂这个东西（他如果真的不懂的话效果其实是最好的），而你的任务则是说到让他理解为止。</p>
 <p>为了让一个不明白的人做到明白，你必须要知道从明白到不明白他究竟需要掌握哪些概念，这就迫使我们对我们大脑中整个的知识体系来个寻根究底，把藏在水面之下的那些东西统统挖出来，把大脑中的那些我们知道、但不知道自己知道的潜在概念或假设（assumptions）都挖出来，把它们从内隐记忆拉扯到外显记忆中。因为只有完全知道、并知道自己知道一切来龙去脉的人，才能真正把一件事情讲得通通透透。</p>
@@ -455,17 +125,6 @@ request resources to maintain a desired level of performance
 <p>[3] 《影响力2》这个名字起得很聪明，其实它并不是《影响力》的作者写的。</p>
 <p>[4] 我忘了这则实验的出处了，但实验的精神是记忆犹新的，哪位同学记得原始出处的麻烦提醒我一下。</p>
 <p>[5] 对于阿基米德这个故事的真实性是有争议的，毕竟几千年久远的事情谁弄得清呢。但是故事的道理是很本质的，我们平时也经常有类似的体验，加上阿基米德的“尤里卡”实在太出名了，所以我相信用用无妨。</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[docker 学习笔记]]></title>
-      <url>http://haolin29.github.io/2016/02/27/docker-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<p>docker用namespace来隔离每个container</p>
-<p>cgroup: docker use group to achieve resource limiting</p>
-<p><img src="https://dl.dropboxusercontent.com/u/95833334/%E5%9B%BE%E5%BA%8A/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202016-02-27%2017.12.56.jpg" alt=""></p>
-<p><img src="https://dl.dropboxusercontent.com/u/95833334/%E5%9B%BE%E5%BA%8A/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202016-02-27%2017.37.13.jpg" alt=""></p>
-<a id="more"></a>
 ]]></content>
     </entry>
     
