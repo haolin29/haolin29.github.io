@@ -74,7 +74,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Haolin" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="Haolin's Blog" type="application/atom+xml" />
 
 
 
@@ -88,12 +88,12 @@
 
 <meta name="description" content="Personal Knowledge Management">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Haolin">
+<meta property="og:title" content="Haolin's Blog">
 <meta property="og:url" content="http://haolin29.github.io/index.html">
-<meta property="og:site_name" content="Haolin">
+<meta property="og:site_name" content="Haolin's Blog">
 <meta property="og:description" content="Personal Knowledge Management">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Haolin">
+<meta name="twitter:title" content="Haolin's Blog">
 <meta name="twitter:description" content="Personal Knowledge Management">
 
 
@@ -117,7 +117,7 @@
 
   <link rel="canonical" href="http://haolin29.github.io/"/>
 
-  <title> Haolin </title>
+  <title> Haolin's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -150,7 +150,7 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Haolin</span>
+      <span class="site-title">Haolin's Blog</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -182,16 +182,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            Categories
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -202,12 +192,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Tags
+            Categories
           </a>
         </li>
       
@@ -215,7 +205,7 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="javascript:;" class="st-search-show-outputs">
+            <a href="javascript:;" class="popup-trigger">
           
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -230,19 +220,12 @@
   
     <div class="site-search">
       
-  <form class="site-search-form">
-  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-</form>
-
-<script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-  _st('install', 'EExk-KPF5JPxsFfy5Tzw','2.0.0');
-</script>
-
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
 
 
     </div>
@@ -561,10 +544,10 @@
 
           
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
+              
                 <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">tags</span>
-              </a>
+              
             </div>
           
 
