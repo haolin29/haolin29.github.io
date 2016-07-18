@@ -4,9 +4,9 @@
   
     
     <entry>
-      <title><![CDATA[learn and understand react]]></title>
+      <title><![CDATA[初识 React.js]]></title>
       <url>http://haolin29.github.io/2016/03/06/learn-and-understand-react/</url>
-      <content type="html"><![CDATA[<h1 id="初识-React-js"><a href="#初识-React-js" class="headerlink" title="初识 React.js"></a>初识 React.js</h1><h2 id="什么是React？"><a href="#什么是React？" class="headerlink" title="什么是React？"></a>什么是React？</h2><p>很多人可能会对这个问题感到困惑。React 其实不是Augular.js 或者 Backbone.js 那样的MVC 框架。 它只是MVC中的V — 也就是表现层， react 只做一件事，这也是符合UNIX的思路。</p>
+      <content type="html"><![CDATA[<h2 id="什么是React？"><a href="#什么是React？" class="headerlink" title="什么是React？"></a>什么是React？</h2><p>很多人可能会对这个问题感到困惑。React 其实不是Augular.js 或者 Backbone.js 那样的MVC 框架。 它只是MVC中的V — 也就是表现层， react 只做一件事，这也是符合UNIX的思路。</p>
 <a id="more"></a>
 <p>按官网描述，其出发点为：</p>
 <blockquote>
